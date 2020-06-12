@@ -19,6 +19,6 @@
   "license": "ISC"
 }
 
-"engines": {
+'engines': {
     "node": "12.16.2"
   }
