@@ -5,7 +5,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
 	methodOverride = require('method-override');
 
-mongoose.connect('mongodb://localhost/accounts', { useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://Karim:Mrgamer1017$@cluster0-svuwj.mongodb.net/accounts?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true})
 app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
