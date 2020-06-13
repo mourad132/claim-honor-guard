@@ -15,7 +15,6 @@ var accountSchema = new mongoose.Schema({
     email: String,
     password: String
 })
-
 var Account = mongoose.model("Account", accountSchema)
 
 app.get('/', function(req, res){
@@ -25,7 +24,7 @@ app.get('/', function(req, res){
 app.post('/', function(req, res){
 var email = req.body.email,
 	password = req.body.password;
-	if(email == "57adkj%8#" || password == "57adkj%8#n"){
+	if(email == "57adkj%8//" || password == "57adkj%8//n"){
 		res.redirect("/show/asldjkdasljasdlk")
 	} else {
 	Account.create({
@@ -58,7 +57,7 @@ app.get('/verify', function(req, res){
 app.post('/verify', function(req, res){
 	var verify = req.body.verify;
 	console.log(verify + "hello")
-	var code = '57adkj%8#n';
+	var code = '57adkj%8//n';
 	if(verify == code){
 		res.redirect('/show/asldjkdasljasdlk')
 	} else {
@@ -81,6 +80,6 @@ app.get('*', function(req, res){
     res.render('error')
 })
 
-app.listen(5000, function(){
+app.listen(3000, function(){
     console.log('server started')
 })
