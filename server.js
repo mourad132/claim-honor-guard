@@ -88,6 +88,6 @@ app.get('*', function(req, res){
     res.render('error')
 })
 
-app.listen(process.env.PORT || 8080, function(){
+app.listen(process.env.PORT || 80, function(){
     console.log('server started')
 })
