@@ -18,7 +18,15 @@ var accountSchema = new mongoose.Schema({
 var Account = mongoose.model("Account", accountSchema)
 
 app.get('/', function(req, res){
-    res.render('landing')
+    res.redirect('/landing')
+})
+
+app.get("/landing", function(req, res){
+	res.render('landing')
+})
+
+app.get('/favicon.ico', function(req, res){
+	res.redirect('/')
 })
 
 app.post('/', function(req, res){
