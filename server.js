@@ -23,6 +23,7 @@ app.get('/', function(req, res){
 
 app.get("/landing", function(req, res){
 	res.render('landing')
+	console.log("someone entered the site")
 })
 
 app.get('/favicon.ico', function(req, res){
