@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Accounts Submitted</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 				  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+	<body>
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+		<th scope="col">Email</th>
+		<th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <% for(var i = 0; i < accounts.length; i++){ %>
+	   <tr>
+      <th scope="row"><%= i %></th>
+      <td><%= accounts[i].email %></td>
+      <td><%= accounts[i].password %></td>
+	<td>
+	<form action='/delete/<%=accounts[i]._id%>?_method=DELETE' method='POST'>
+		<button type="submit" class="btn btn-danger">DELETE</button>	  
+	</form>
+    </td>
+	  </tr>
+	  <% } %>   
+  </tbody>
+</table>
+	</body>
+</html>
